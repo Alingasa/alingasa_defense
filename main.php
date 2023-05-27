@@ -17,9 +17,10 @@ class Db extends Database
         $createdb = "CREATE DATABASE IF NOT EXISTS $this->dbName";
         $this->conn->query($createdb);
 
+        $use = "USE $this->dbName";
+        $this->conn->query($use);
+
         var_dump($this->conn->error);
     }
 
 }
-$new = new Db;
-$new->connect();
