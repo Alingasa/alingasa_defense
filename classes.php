@@ -8,4 +8,5 @@ abstract class Database
 interface Manage
 {
    public function createtbl();
+   public function insertbl($f, $m, $l);
 }

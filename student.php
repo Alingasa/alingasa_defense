@@ -18,4 +18,11 @@ class Student extends Db implements Manage
             var_dump($this->conn->error);
 
     }
+    public function insertbl($f, $m, $l)
+    {
+        $insertbl = "INSERT INTO $this->tblName(first_name, middle_name, last_name)
+        VALUES('$f','$m','$l')";
+
+        $this->conn->query($insertbl);
+    }
 }
