@@ -15,7 +15,7 @@ if(isset($_GET['id']))
     }else{
         echo json_encode([
             "code" => 404,
-            "message" => "Person not found"
+            "message" => "Student not found"
         ]);
     }
 }else{
