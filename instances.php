@@ -7,11 +7,11 @@ $output = $new->insertbl($_GET);
 
 if(isset($_GET['id']))
 {
-    $q = $new->selectall($_GET['id']);
+    $select = $new->selectall($_GET['id']);
 
-    if(!empty($q))
+    if(!empty($select))
     {
-        echo json_encode($q);
+        echo json_encode($select);
     }else{
         echo json_encode([
             "code" => 404,
@@ -20,8 +20,8 @@ if(isset($_GET['id']))
     }
 }else{
     $all = $new->getall();
-    $ll = $all->fetch_all(MYSQLI_ASSOC);
-    echo json_encode($ll);
+    $getall = $all->fetch_all(MYSQLI_ASSOC);
+    echo json_encode($getall);
 }
 if($output)
 {
