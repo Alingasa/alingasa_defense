@@ -1,5 +1,5 @@
 <?php
-include "class/abstract.php";
+include "classes/abstract.php";
 class Database extends Db
 {
     public $conn;
