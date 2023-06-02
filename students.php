@@ -1,7 +1,7 @@
 <?php
 header("Content-type: application/json; charset=UTF-8");
 
-include "class/interface.php";
+include "classes/interface.php";
 include "databaseconnection.php";
 class Students extends Database implements Dbconn
 {
