@@ -45,7 +45,16 @@ class Students extends Database implements Dbconn
 
         $insertbl = "INSERT INTO $this->tblName(first_name, last_name, email, major, year)
         VALUES('$first_name','$last_name','$email','$major','$year')";
-        return $this->conn->query($insertbl);
+        $this->conn->query($insertbl);
+        if($insertbl)
+  {
+    return json_encode(
+        [
+            "code" => 201,
+            "message" => "Added Successfully!"
+        ]
+        );
+}
     }
     public function getall()
     {
